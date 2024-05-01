@@ -5,25 +5,27 @@ import AddTaskForm from './components/AddTaskForm';
 import TaskAssignment from './components/TaskAssignment';
 import TaskStatusUpdates from './components/TaskStatusUpdates';
 import Home from './components/MyTaskDashboard/Home'
-import Sidebar from './components/Layout/Sidebar';
+// import Sidebar from './components/Layout/Sidebar';
 import TaskDetails from './components/TaskDetails'
 
 
 const users = [
-  { id: 1, name: 'John Doe', role: 'Frontend Developer' },
-  { id: 2, name: 'Jane Smith', role: 'UI/UX Designer' },
-  { id: 3, name: 'Michael Johnson', role: 'Project Manager' },
-  { id: 4, name: 'Emily Brown', role: 'Software Engineer' },
-  { id: 5, name: 'Alex Davis', role: 'Quality Assurance' },
+  { id: 1, name: 'David Miller', role: 'Backend Developer' },
+  { id: 2, name: 'Sophia Williams', role: 'Graphic Designer' },
+  { id: 3, name: 'Matthew Martinez', role: 'Product Owner' },
+  { id: 4, name: 'Olivia Jones', role: 'DevOps Engineer' },
+  { id: 5, name: 'Daniel Thompson', role: 'System Analyst' },
 ];
+
 
 
 const App = () => {
   const [tasks, setTasks] = useState([
-    { id: 1, title: 'Task 1', description: 'Description for Task 1', assignedTo: [], acceptedBy: [], status: 'Pending', createdAt: "2024-05-01T11:15:56.188Z" , updatedAt: "2024-05-01T11:19:46.291Z" },
-    { id: 2, title: 'Task 2', description: 'Description for Task 2', assignedTo: [], acceptedBy: [], status: 'Pending', createdAt: "2024-05-01T11:15:56.188Z" , updatedAt: "2024-05-01T11:19:46.291Z" },
-    { id: 3, title: 'Task 3', description: 'Description for Task 3', assignedTo: [], acceptedBy: [], status: 'Pending', createdAt: "2024-05-01T11:15:56.188Z" , updatedAt: "2024-05-01T11:19:46.291Z"  },
-  ]);
+    { id: 1, title: 'Project A', description: 'Description for Project A', assignedTo: [], acceptedBy: [], status: 'Pending', createdAt: "2024-05-01T11:15:56.188Z" , updatedAt: "2024-05-01T11:19:46.291Z" },
+    { id: 2, title: 'Project B', description: 'Description for Project B', assignedTo: [], acceptedBy: [], status: 'Pending', createdAt: "2024-05-01T11:15:56.188Z" , updatedAt: "2024-05-01T11:19:46.291Z" },
+    { id: 3, title: 'Project C', description: 'Description for Project C', assignedTo: [], acceptedBy: [], status: 'Pending', createdAt: "2024-05-01T11:15:56.188Z" , updatedAt: "2024-05-01T11:19:46.291Z"  },
+]
+);
 
   useEffect(() => {
     const storedTasks = localStorage.getItem('tasks');
